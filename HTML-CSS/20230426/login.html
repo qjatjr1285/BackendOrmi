@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <!-- 부트스트랩 -->
+    <!-- // 부트스트랩 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" type="text/css" href="HTML-CSS\css\bootstrap.min.css">
+    <style>
+        form {
+            
+        }
+        div, table {
+            /* div 가운데 정렬은 width 값 지정하고 margin: 0 auto; 써주면 가운데 정렬이 된다. */
+            width:400px;
+            margin: 0 auto;
+        }
+        button {
+            background-color: royalblue;
+            color: white;
+            font-weight: bold;
+            border: solid;
+            width: inherit;
+            height: 40px;
+            border-radius: 8px;
+        }
+        h1, p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <h1 style="text-align: center;">로그인</h1>
+        <p>아이디와 비밀번호를 입력하고 로그인하세요</p>
+        <div>
+            <table>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="user-id" id="user-id"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" name="user-pw" id="user-pw" required></td>
+                </tr>
+            </table>
+            <!-- 아이디 <input type="text" name="user-id" id="user-id"><br>
+            비밀번호 <input type="password" name="user-pw" id="user-pw" required><br> -->
+            <input type="checkbox" name="save-id" id="save-id">
+            <label for="save-id">아이디 저장</label><br>
+            <button type="submit" id="login" value="로그인">로그인</button>
+        </div>
+    </form>
+</body>
+</html>
