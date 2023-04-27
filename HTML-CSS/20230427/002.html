@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <table border="1">
+        <!-- 캡션은 테이블의 첫번째 자식으로 사용해야 함. -->
+        <!-- 안그러면 오류 뜸 -->
+        <caption>내용설명</caption>
+        <colgroup>
+            <col>
+            <col width="200px" style="background-color: yellow; border: solid;">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th colspan="2">제목/작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2">제목</th>
+                <td>공지사항입니다</td>
+                <td>홍길동</td>
+            </tr>
+            <tr>
+                <td>공지사항입니다</td>
+                <td>홍길동</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
