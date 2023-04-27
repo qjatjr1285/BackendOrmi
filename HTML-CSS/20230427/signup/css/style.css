@@ -5,9 +5,11 @@ p {
 }
 
 .container {
-    width: 500px;
+    width: 400px;
     /* background-color: skyblue; */
     margin: 40px auto;
+    font-size: 12px;
+
 }
 .title,
 .description {
@@ -33,6 +35,7 @@ form > div {
     width: 290px;
     height: 28px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 .btn-submit {
     width: 100%;
@@ -49,4 +52,15 @@ form > div {
     /* 로그인 버튼 누르는 느낌 */
     border: 0;
     margin-top: 21px;
+}
+td {
+    font-weight: bold;
+}
+.lbl-td1 {
+    width: 25%;
+    
+}
+.lbl-td2 {
+    /* width: 25%; */
+
 }
