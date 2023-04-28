@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: slateblue;
+            float: left;
+        }
+        /* p {
+            clear: left;
+        } */
+        .wrap {
+            background-color: skyblue;
+            overflow: hidden;
+            height: 100px;
+        }
+        .wrap::after {
+            content:'';
+            display:block;
+            clear:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ipsa dicta illum eaque sint iste, maiores blanditiis saepe accusantium harum. Optio, hic. Dolore deleniti eveniet optio officia modi harum totam!</p>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, sed. Modi nulla laborum impedit blanditiis esse delectus? Est, recusandae? Earum iure ullam atque autem sequi veritatis fugit nemo delectus ea.
+    </p>
+</body>
+</html>

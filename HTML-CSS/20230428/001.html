@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container {
+            height: 800px;
+            background-color: skyblue;
+            display: flex;
+            /* flex-direction: column-reverse;  세로 역순 정렬*/
+            /* flex-direction: row-reverse; 가로 역순 정렬 */
+            /* justify-content: flex-end; 끝에서부터 정렬 */
+            /* justify-content: space-between; 간격까지 자동 정렬  */
+            /* justify-content: space-around; 컨텐츠 사이사이의 간격을 동일하게 */
+            /* justify-content: space-evenly; 모든 간격을 동일하게 */
+            /* gap: 40px; 간격 조정 */
+            gap: 40px;
+            /* flex-wrap: wrap; */
+            /* flex-direction: column;s */
+        }
+        .container div {
+            /* flex-basis: 100px; */
+            flex-grow: 1;
+            /* width: 100px;
+            height: 100px; */
+            border: 3px solid black;
+            font-size: 10px;
+        }
+        .container div:nth-child(1) {
+            background-color: royalblue;
+        }
+        .container div:nth-child(2) {
+            background-color: salmon;
+        }
+        .container div:nth-child(3) {
+            background-color: gold;
+        }
+        .container div:nth-child(4) {
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <!-- <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div> -->
+    </div>
+</body>
+</html>
