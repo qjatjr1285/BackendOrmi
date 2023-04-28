@@ -232,3 +232,37 @@ body {
   width: 200px;
   height: 32px;
 }
+
+/* 글 조회 페이지 */
+.content-info {
+  display: inline-flex;
+  justify-content: space-;
+  margin-bottom: 5px;
+  
+}
+.content-info p {
+  margin-right: 10px;
+  
+}
+.content-info :nth-child(2) {
+  padding: 0 10px 0 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.title-content {
+  background-color: #ddd;
+  border-top: 2px solid black;
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+}
+.main-content {
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+ul{
+  /* 마커를 안으로 들여옴 */
+  list-style-position: inside;
+}
+ol {
+  margin-inline-start: -20px;
+}
