@@ -7,7 +7,7 @@
     <title></title>
     <style>
         .container {
-            height: 800px;
+            height: 100px;
             background-color: skyblue;
             display: flex;
             /* flex-direction: column-reverse;  세로 역순 정렬*/
@@ -19,10 +19,10 @@
             /* gap: 40px; 간격 조정 */
             gap: 40px;
             /* flex-wrap: wrap; */
-            /* flex-direction: column;s */
+            /* flex-direction: row; */
         }
         .container div {
-            /* flex-basis: 100px; */
+            flex-basis: 150px;
             flex-grow: 1;
             /* width: 100px;
             height: 100px; */
@@ -31,6 +31,7 @@
         }
         .container div:nth-child(1) {
             background-color: royalblue;
+            
         }
         .container div:nth-child(2) {
             background-color: salmon;
