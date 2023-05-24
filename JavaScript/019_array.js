@@ -194,3 +194,6 @@ let data = [{
 // 원하는 데이터
 // 위 데이터를 가지고 아래와 같이 새로운 array를 만들고 싶습니다. 정답 코드를 작성해주세요.
 [[0, 'hojun', 9], [1, 'junho', 19], [2, 'sunghun', 29]]
+data.map((v, i) => {
+    console.log([i, v.name.split(' ')[1], v.age-1])
+    })
