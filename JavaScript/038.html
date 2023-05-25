@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: small;
+            
+        }
+        .flex-item {
+            width: 250px;
+            height: 250px;
+            border: 1px solid #d9dbe0;
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .imgBox {
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            height: inherit;
+        }
+        .thumbnail {
+            width: 250px;
+            border: 1px solid #d9dbe0;
+            border-radius: 0%;
+            height: inherit;
+        }
+
+        .studyStatus{
+            padding: 10px;
+        }
+        .difficulty {
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid #d9dbe0;
+            
+        }
+        .title {
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid #d9dbe0;
+
+        }
+        .cont {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <div class="studyStatus">${i.study_status}</div>
+        <div class="imgBox">
+            <img class="thumbnail" src="${i.thumbnailImg}" alt="">
+        </div>
+        <div class="difficulty">${i.difficulty}</div>
+        <div class="title">${i.title}</div>
+    </div> -->
+    <!-- 실제로는 통신으로 받아왔다고 가정합니다. -->
+    <script src="data2.js"></script>
+    <script>
+        console.log(data)
+        s = ''
+        for (const i of data) {
+        console.log(i.thumbnail)
+        console.log(i.difficulty)
+        console.log(i.title)
+        console.log(i.study_status)   
+        
+        s += `
+            <div class="flex-item">
+                <div class="studyStatus">${i.study_status.name}</div>
+                <div class="imgBox">
+                    <img class="thumbnail" src="${i.thumbnail}" alt="">
+                </div>
+                <div class="cont">
+                    <p class="difficulty">${i.difficulty.name}</p>
+                    <h3 class="title">${i.title}</h3>
+                </div>
+            </div>
+            `
+        }
+        document.querySelector('body').innerHTML = s;
+    </script>
+</body>
+
+</html>
