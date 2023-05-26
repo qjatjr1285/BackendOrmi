@@ -55,7 +55,6 @@
 
                 localStorage.setItem("allMemo", JSON.stringify(allMemo));
                 render();
-                resetField();
             }
 
             function render() {
@@ -73,8 +72,6 @@
                     const saveId = document.createElement("p");
                     const deleteMemoBtn = document.createElement("button");
 
-                    const updateMemoBtn = document.createElement("button");
-
                     saveTitle.textContent = item.title;
                     saveContent.textContent = item.content;
                     saveId.textContent = item.len + 1;
@@ -82,25 +79,16 @@
                     deleteMemoBtn.setAttribute("id", item.len);
                     deleteMemoBtn.setAttribute("onclick", "remove()");
 
-                    
-                    updateMemoBtn.textContent = "수정";
-                    updateMemoBtn.setAttribute("id", item.len);
-                    updateMemoBtn.setAttribute("onclick", "update()");
-
                     display.appendChild(saveId);
                     display.appendChild(saveTitle);
                     display.appendChild(saveContent);
                     display.appendChild(deleteMemoBtn);
-                    display.appendChild(updateMemoBtn);
-
                 }
             }
-            
-            
 
             function remove() {
-                console.log(event.srcElement.id);
-                console.log(allMemo);
+                // console.log(event.srcElement.id);
+                // console.log(allMemo);
                 const idx = allMemo.find(
                     (item) => item.len == event.srcElement.id
                 );
@@ -112,47 +100,6 @@
                 }
                 localStorage.setItem("allMemo", JSON.stringify(allMemo));
                 render();
-            }
-
-            function update() {
-                const idx = allMemo.find(
-                    (item) => item.len == event.srcElement.id
-                );
-                if (idx) {
-                    const title = document.getElementById("title").value;
-                    const content = document.getElementById("content").value;
-
-                    document.getElementById("title").value = idx.title
-                    document.getElementById("content").value = idx.content
-
-                }
-                    const updateBtn = document.querySelector("button")
-                    updateBtn.textContent = '수정';
-                    updateBtn.setAttribute("onclick", "save()")
-                    index = idx;
-            }
-
-            let index;
-
-            function save() {
-                idx = index;
-                if (idx) {
-                    idx.title = document.getElementById("title").value
-                    idx.content = document.getElementById("content").value
-
-                    resetField();
-                }
-                    const updateBtn = document.querySelector("button")
-                    updateBtn.textContent = '메모';
-                    updateBtn.setAttribute("onclick", "saveNote()")
-
-                    localStorage.setItem("allMemo", JSON.stringify(allMemo));
-                    render();
-            }
-
-            function resetField(){
-                title.value = null
-                content.value = null
             }
         </script>
     </body>
