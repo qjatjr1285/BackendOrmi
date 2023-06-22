@@ -19,5 +19,6 @@ urlpatterns = [
     # 글 삭제
     path('detail/<int:pk>/delete/', views.Delete.as_view(), name='delete'),
     # 코멘트 작성
+    path('detail/<int:post_id>/comment', views.CommentWrite.as_view(), name='comment')
     # 코멘트 삭제
 ]
