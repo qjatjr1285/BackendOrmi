@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+# Auth User
+#AUTH_<class_이름>_MODEL = '<app_이름>.<class_이름>'
+AUTH_USER_MODEL = 'user.User'
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
