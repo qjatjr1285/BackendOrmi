@@ -1,5 +1,5 @@
 <!-- form error 출력 -->
-{% if form.errors %}
+
 <div class="alert alert-danger">
     <ul>
         {% for errors in form.errors.values %}
@@ -8,5 +8,5 @@
             {% endfor %}
         {% endfor %}
     </ul>
+    {{ form }}
 </div>
-{% endif %}

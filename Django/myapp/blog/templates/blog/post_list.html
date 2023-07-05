@@ -1,9 +1,13 @@
-{% extends 'blog/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
     <!-- <h1>블로그 게시판 화면</h1> -->
     <p>블로그 게시판 첫 화면입니다.</p>
-    <a href="{% url 'blog:write' %}" class="btn btn-outline-success">글 작성</a>
+    <form action="{% url 'blog:write' %}" method="get">
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ request.GET.next }}">
+        <input type="submit" value="글 작성">
+    </form>
+    <!-- <a href="{% url 'blog:write' %}" class="btn btn-outline-success">글 작성</a> -->
     <!-- context -->
     <!-- 조건문, 순회문 -->
     {% if posts %}
